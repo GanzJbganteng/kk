@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zenix Web Tools</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="sidebar-closed">
+
+  <!-- hamburger -->
+  <button id="hamBtn" class="ham">☰</button>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="sidebar closed">
+    <div class="logo">Zenix Web Tools</div>
+    <nav>
+      <ul>
+        <li><a data-page="welcome"    href="#" class="active"><i data-lucide="home"></i> Beranda</a></li>
+        <li><a data-page="func"       href="#"><i data-lucide="bug"></i> Func Bug</a></li>
+        <li><a data-page="preset"     href="#"><i data-lucide="sparkles"></i> Preset AM</a></li>
+        <li><a data-page="about"      href="#"><i data-lucide="info"></i> Tentang</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">🌓</button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <!-- Welcome -->
+    <section id="welcomeSection" class="page">
+      <header class="hero">
+        <h1 class="glow-h1">Selamat Datang</h1>
+        <p class="glow-sub">Pusat Func Bug & Tools Sederhana</p>
+      </header>
+    </section>
+
+    <!-- Func Bug -->
+    <section id="funcSection" class="page hidden">
+      <h2 class="title-page">Func Bug Zone</h2>
+      <div id="bugContainer" class="bug-list"></div>
+    </section>
+
+    <!-- Preset AM -->
+    <section id="presetSection" class="page hidden">
+      <h2 class="title-page">Preset Alight Motion</h2>
+      <input id="presetSearch" class="preset-search" placeholder="Cari preset…"/>
+      <div id="presetList" class="preset-wrap"></div>
+    </section>
+
+    <!-- About -->
+    <section id="aboutSection" class="page hidden">
+      <h2 class="title-page">Tentang</h2>
+      <p>Halo, saya <strong>Rofik</strong>. Goal-nya: berbagi func bug & tool gratis untuk semua 😎</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-foot">
+    <small>© 2025 Zenix Web. Semua hak dilindungi.</small>
+
+    <label class="switch">
+      <span>Terang</span>
+      <input type="checkbox" id="modeSwitch">
+      <span class="slider"></span>
+      <span>Gelap</span>
+    </label>
+
+    <div class="contacts">
+      <a href="https://wa.me/6281234567890" target="_blank" title="WhatsApp"><i data-lucide="phone"></i></a>
+      <a href="https://t.me/username"      target="_blank" title="Telegram"><i data-lucide="send"></i></a>
+    </div>
+  </footer>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- SCRIPTS -->
+  <script src="preset.js"></script>
+  <script src="func.js"></script>  <!--  ✅ load fungsi bug -->
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
